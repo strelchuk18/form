@@ -16,9 +16,9 @@ $fn = $_POST['first_name'];
 $ln = $_POST['last_name'];
 $email = $_POST['email'];
 
- echo ($fn) . "<br />"; 
- echo ($ln) . "<br />";
-echo ($email) . "<br />";
+	echo ($fn) . "<br />"; 
+	echo ($ln) . "<br />";
+	echo ($email) . "<br />";
 
 $result = mysqli_query($connection, "INSERT INTO `users`(`first_name`, `last_name`, `email` ) VALUES ('$fn','$ln', '$email')");
 if ($result) {
@@ -27,10 +27,7 @@ if ($result) {
 else {
     echo "Произошла ошибка, пожалуйста повторите попытку.";
 } 
-?>
-<?php
-header("Location: http://new.loc/"); /* Перенаправление браузера */
 
-/* Убедиться, что код ниже не выполнится после перенаправления .*/
+header("Location: http://new.loc/");
 exit;
 ?> 
