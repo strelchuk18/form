@@ -1,14 +1,12 @@
-
 <?php
 $connection = mysqli_connect('localhost', 'root', 'rootroot');
 if($connection == false)
 {
     exit();
-} else
-{
 }
+
 $db=mysqli_select_db($connection, "resource");
-mysqli_set_charset("utf8_general_ci");
+mysqli_set_charset("utf8");
 if (!$connection || !$db)
 {
 exit(mysqli_error());
@@ -31,7 +29,7 @@ else {
 } 
 ?>
 <?php
-header("Location: http://strelchuk.loc/"); /* Перенаправление браузера */
+header("Location: http://new.loc/"); /* Перенаправление браузера */
 
 /* Убедиться, что код ниже не выполнится после перенаправления .*/
 exit;
