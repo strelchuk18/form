@@ -8,18 +8,17 @@
   <div class="postcard">
     <?php
       $connection = mysqli_connect('localhost', 'root', 'rootroot');
-      if($connection == false)
-      {
+      if($connection == false) {
         exit();
       }
 
-      $db=mysqli_select_db($connection, "resource");
+      $db = mysqli_select_db($connection, "resource");
         mysqli_set_charset("utf8");
       if (!$connection || !$db) {
         exit(mysqli_error());
       }
 
-      $result = mysqli_query($connection,"SELECT * FROM users");
+      $result = mysqli_query($connection, "SELECT * FROM users");
       $all_property = array();
 
       echo '<table border = "1"><thead><tr>';
@@ -33,7 +32,7 @@
         echo '<tbody><tr>';
         foreach ($all_property as $item) {
           echo '<td>' . $row[$item] . '</td>';
-      }
+        }
         echo '</tr></tbody>';
       }
       echo "</table>";
