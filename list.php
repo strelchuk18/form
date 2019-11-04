@@ -33,8 +33,8 @@
       while ($row = mysqli_fetch_array($result)) {
         echo '<tbody><tr>';?>
         <td>
-          <form action="delete.php" methot="POST">
-            <input type="hidden" name="delete" value="{'id'}" />
+          <form action='delete.php?id="<?php echo $row['id']; ?>"' methot="POST">
+            <input type="hidden" name="id" value="<?php echo $row['id']; ?>" />
             <input type="submit" value="удалить" />
           </form> 
         </td>
