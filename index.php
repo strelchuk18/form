@@ -24,5 +24,8 @@
 	    	</div>
 	   	</div>
 		</form>
+		<form action="http://new.loc/list.php">
+    <button type="submit">List with users</button>
+</form>
   </body>
 </html>
