@@ -26,28 +26,25 @@
       while ($property = mysqli_fetch_field($result)) {
         echo '<th>' . $property->name . '</th>';
         array_push($all_property, $property->name);
-      }
-      
+      }    
       echo '</tr></thead>';
 
       while ($row = mysqli_fetch_array($result)) {
         echo '<tbody><tr>';?>
-        <td>
-          <form action='delete.php?id="<?php echo $row['id']; ?>"' methot="POST">
-            <input type="hidden" name="id" value="<?php echo $row['id']; ?>" />
-            <input type="submit" value="удалить" />
-          </form> 
-        </td>
-      <?php
-        foreach ($all_property as $item) { 
-          echo '<td>' . $row[$item] . '</td>';
-    
-          }
+    <td>
+      <form action='delete.php?id="<?php echo $row['id']; ?>"' methot="POST">
+        <input type="hidden" name="id" value="<?php echo $row['id']; ?>"/>
+        <input type="submit" value="удалить"/>
+      </form> 
+    </td>
+    <?php
+      foreach ($all_property as $item) { 
+        echo '<td>' . $row[$item] . '</td>';
         }
-      
-       echo  '</tr></tbody>
+      }
+      echo '</tr></tbody>
       </table>';
-      ?>
+    ?>
   </div>
 </body>
 </html>
