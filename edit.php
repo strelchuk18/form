@@ -8,15 +8,12 @@ if($connection == false)
 {
     exit();
 }
-
 $db=mysqli_select_db($connection, "resource");
 mysqli_set_charset("utf8");
 if (!$connection || !$db)
 {
 exit(mysqli_error());
 }
-
-
 $result = mysqli_query($connection, "UPDATE `users` SET `id` = '$id', `first_name` = '$fn',`last_name` = '$ln',`email` = '$email' WHERE `users`.`id` = '$id'");
 if ($result) {
     echo "Данные успешно сохранены!";
@@ -26,5 +23,4 @@ else {
 } 
   header('Location: list.php'); 
   exit;
-
-?>
+?> 

@@ -7,18 +7,18 @@
 <body>
   <div class="postcard">
     <?php
-      $connection = mysqli_connect('localhost', 'root', 'rootroot');
-      if($connection == false) {
+      $conn = mysqli_connect('localhost', 'root', 'rootroot');
+      if($conn == false) {
         exit();
       }
 
-      $db = mysqli_select_db($connection, "resource");
+      $db = mysqli_select_db($conn, "resource");
         mysqli_set_charset("utf8");
-      if (!$connection || !$db) {
+      if (!$conn || !$db) {
         exit(mysqli_error());
       }
 
-      $result = mysqli_query($connection, "SELECT * FROM users ORDER BY `users`.`id` ASC");
+      $result = mysqli_query($conn, "SELECT * FROM users ORDER BY `users`.`id` ASC");
       $all_property = array();
 
       echo '<table border = "1"><thead><tr>';
