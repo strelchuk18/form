@@ -38,14 +38,13 @@
         </form> 
         <form action='listedit.php?id="<?php echo $row['id']; ?>"' methot="POST">
           <input type="hidden" name="id" value="<?php echo $row['id']; ?>"/>
-          
           <input type="submit" value="Edit" />
         </form> 
       </td>
     <?php
       foreach ($all_property as $item) { 
         echo '<td>' . $row[$item] . '</td>';
-        }
+      }
       }
       echo '</tr></tbody>
       </table>';
