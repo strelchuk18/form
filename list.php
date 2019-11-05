@@ -38,9 +38,7 @@
         </form> 
         <form action='listedit.php?id="<?php echo $row['id']; ?>"' methot="POST">
           <input type="hidden" name="id" value="<?php echo $row['id']; ?>"/>
-          <input type="hidden" name="first_name" value="<?php echo $row['first_name']; ?>"/>
-          <input type="hidden" name="last_name" value="<?php echo $row['last_name']; ?>"/>
-          <input type="hidden" name="email" value="<?php echo $row['email']; ?>"/>
+          
           <input type="submit" value="Edit" />
         </form> 
       </td>

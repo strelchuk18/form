@@ -17,7 +17,7 @@ exit(mysqli_error());
 }
 
 
-$result = mysqli_query($connection, "UPDATE `users` SET `first_name` = '$fn',`last_name` = '$ln',`email` = '$email' WHERE `users`.`id` = '$id'");
+$result = mysqli_query($connection, "UPDATE `users` SET `id` = '$id', `first_name` = '$fn',`last_name` = '$ln',`email` = '$email' WHERE `users`.`id` = '$id'");
 if ($result) {
     echo "Данные успешно сохранены!";
 }
